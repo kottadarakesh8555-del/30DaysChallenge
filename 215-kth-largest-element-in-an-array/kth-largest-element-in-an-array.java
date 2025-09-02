@@ -7,11 +7,6 @@ class Solution {
         List<Integer> copyList=new ArrayList<>(Arrays.asList(boxedNums));
         Collections.sort(copyList, Collections.reverseOrder());
         System.out.println(copyList);
-        for(int i=0;i<copyList.size();i++){
-            if(i==(k-1)){
-                return copyList.get(k-1);
-            }
-        }
-        return 0;
+        return copyList.get(k-1);
     }
 }
