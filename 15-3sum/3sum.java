@@ -3,6 +3,7 @@ class Solution {
         Arrays.sort(nums);
 
         Set<List<Integer>> li=new HashSet<>();
+        List<List<Integer>> AnotherMethod=new ArrayList<>(li);
         //for outerloop to keep track of i 
         int n=nums.length;
         for(int i=0;i<n;i++){
@@ -20,7 +21,7 @@ class Solution {
                     k--;
                 }
                 else{
-                    li.add(Arrays.asList(nums[i],nums[j],nums[k]));
+                    AnotherMethod.add(Arrays.asList(nums[i],nums[j],nums[k]));
                     //li.add(Arrays.asList(nums[i],nums[j],nums[k]));
                     while(j<k && nums[j]==nums[j+1])j++;
                     while(j<k && nums[k]==nums[k-1])k--;
@@ -30,6 +31,6 @@ class Solution {
             }
         }
         List<List<Integer>> lli=new ArrayList<>(li);
-        return lli;
+        return AnotherMethod;
     }
 }
